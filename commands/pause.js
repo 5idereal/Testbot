@@ -9,6 +9,8 @@ module.exports = {
                 "你必須在語音頻道裡面才能暫停音樂。"
             );
         //serverQueue.songs = [];
+        message.channel.send("⏸ 已暫停。");
         serverQueue.connection.dispatcher.pause();
+
     },
 };

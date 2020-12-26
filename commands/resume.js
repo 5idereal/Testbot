@@ -8,6 +8,7 @@ module.exports = {
             return message.channel.send(
                 "你必須在語音頻道裡面才能繼續播放音樂。"
             );
+            message.channel.send("⏯ 繼續播放。");
         serverQueue.connection.dispatcher.resume();
     },
 };
