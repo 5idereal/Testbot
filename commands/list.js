@@ -6,7 +6,9 @@ module.exports = {
 			timeout: 1,
 			reason: ''
 		})
-		const serverQueue = message.client.queue.get(message.guild.id);
+		const queue = message.client.queue;
+        const guild = message.guild;
+        const serverQueue = queue.get(message.guild.id);
 		var a = "";
 		console.log(serverQueue.songs);
 		serverQueue.songs.forEach(function (value, i) {
