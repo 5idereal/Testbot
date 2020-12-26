@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'list',
+    name: 'stop',
     description: 'print out current queue.',
     execute(message, args) {
         message.delete({
