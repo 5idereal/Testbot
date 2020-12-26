@@ -5,6 +5,8 @@ const ytdl = require("ytdl-core");
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const queue = new Map();
+const fs = require('fs');
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 client.once("ready", () => {
   console.log("就緒");
 });
@@ -21,7 +23,7 @@ client.on('message', async message => {
 
   if (!command) message.channel.send("沒有這個指令。");
 	try {
-		command.execute(message, args, games);
+		command.execute(message, args);
 	} catch (error) {
 		console.error(error);
 	}

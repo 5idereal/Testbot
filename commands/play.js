@@ -71,14 +71,8 @@ module.exports = {
         if (!song) {
             serverQueue.voiceChannel.leave();
             queue.delete(guild.id);
-            message.client.user.setActivity('A片', {
-                type: 'WATCHING'
-            });
             return;
         }
-        message.client.user.setActivity(song.title, {
-            type: 'LISTENING'
-        });
         const dispatcher = serverQueue.connection
             .play(ytdl(song.url))
             .on("finish", () => {
