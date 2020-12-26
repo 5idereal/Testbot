@@ -1,12 +1,11 @@
 const Discord = require("discord.js");
 const prefix = "/";
 const token = "your own token here";
-const ytdl = require("ytdl-core");
 const client = new Discord.Client({
 	partials: ['MESSAGE', 'REACTION', 'CHANNEL', 'USER', 'GUILD_MEMBER']
 });
 client.commands = new Discord.Collection();
-const queue = new Map();
+client.queue = new Map();
 const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 client.once("ready", () => {
