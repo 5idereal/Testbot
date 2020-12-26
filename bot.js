@@ -2,7 +2,9 @@ const Discord = require("discord.js");
 const prefix = "/";
 const token = "your own token here";
 const ytdl = require("ytdl-core");
-const client = new Discord.Client();
+const client = new Discord.Client({
+	partials: ['MESSAGE', 'REACTION', 'CHANNEL', 'USER', 'GUILD_MEMBER']
+});
 client.commands = new Discord.Collection();
 const queue = new Map();
 const fs = require('fs');
