@@ -1,6 +1,6 @@
 
 module.exports = {
-    name: 'dice',
+    name: 'delete',
     description: 'return a random number from 1 to 6.',
     execute(message, args) {
         message.delete({
