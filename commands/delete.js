@@ -9,7 +9,7 @@ module.exports = {
         })
         let fetched;
         do {
-            fetched = await channel.messages.fetch({ limit: args[1] });
+            fetched = await message.channel.messages.fetch({ limit: args[1] });
             message.channel.bulkDelete(fetched);
         }
         while (fetched.size >= 2);
