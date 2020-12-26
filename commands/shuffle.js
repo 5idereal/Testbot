@@ -26,5 +26,11 @@ module.exports = {
         })
         const serverQueue = message.client.queue.get(message.guild.id);
         shuffle(serverQueue.songs);
+        message.channel.send("將播放清單隨機排列。");
+        var a = "";
+		serverQueue.songs.forEach(function (value, i) {
+		  a += i + 1 + '. **' + value.title + '**\n';
+		});
+		return message.channel.send(a);
     },
 };
