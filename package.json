@@ -1,0 +1,27 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "A music bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "bufferutil": "^4.0.2",
+    "cheerio": "^1.0.0-rc.5",
+    "discord.js": "^12.5.1",
+    "erlpack": "github:discord/erlpack",
+    "ffmpeg": "0.0.4",
+    "node-fetch": "^2.6.1",
+    "node-opus": "^0.3.3",
+    "opusscript": "0.0.7",
+    "request": "^2.88.2",
+    "uws": "^100.0.1",
+    "ytdl-core": "^4.2.1",
+    "ytdl-core-discord": "^1.2.4",
+    "zlib-sync": "^0.1.7"
+  }
+}
